@@ -28,4 +28,12 @@
     file:
       src: /var/www/ips-ansible-workshop/html/index.html
       dest: /var/www/html/index.html
+      state: hard
+      force: yes
+
+  - name: add hostname to html
+    replace:
+      path: /var/www/html/index.html
+      regexp: '/me'
+      replace: {{ ansible_host }}
 
