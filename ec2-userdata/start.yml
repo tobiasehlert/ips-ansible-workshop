@@ -1,0 +1,16 @@
+---
+- name: Base Amazon Linux install
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: Update all packages
+    dnf:
+      name: "*"
+      state: latest
+
+  - name: Install packages
+    dnf:
+      name:
+        - vim
+        - git-core
