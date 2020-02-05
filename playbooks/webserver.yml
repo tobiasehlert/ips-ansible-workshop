@@ -35,5 +35,5 @@
     replace:
       path: /var/www/html/index.html
       regexp: '/me'
-      replace: {{ ansible_host }}
+      replace: '{{ ansible_host }}'
 
