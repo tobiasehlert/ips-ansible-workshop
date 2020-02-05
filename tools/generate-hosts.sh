@@ -8,4 +8,4 @@ echo '  children:
     webservers:
       hosts:' >> hosts-tmp.yml
 aws ec2 describe-instances --output text --filters Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].[PublicDnsName, [Tags[?Key==`ansible-workshop`].Value] [0][0] ]' | grep -v Master | awk '{print "        " $1}' >> hosts-tmp.yml
-mv hosts-tmp.yml ../hosts.yml
+mv ~/ips-ansible-workshop/tools/hosts-tmp.yml ~/ips-ansible-workshop/hosts.yml
