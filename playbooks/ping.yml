@@ -1,0 +1,8 @@
+---
+- name: ping.yml playbook
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: ping all our hosts
+      ping:
