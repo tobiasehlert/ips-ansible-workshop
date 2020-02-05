@@ -5,12 +5,12 @@
 
   tasks:
   - name: Update all packages
-    dnf:
+    yum:
       name: "*"
       state: latest
 
   - name: Install packages
-    dnf:
+    yum:
       name:
         - htop
         - git-core
