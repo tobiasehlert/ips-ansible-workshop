@@ -12,5 +12,6 @@
   - name: Install packages
     dnf:
       name:
-        - vim
+        - htop
         - git-core
+
