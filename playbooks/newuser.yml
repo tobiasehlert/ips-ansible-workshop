@@ -1,0 +1,16 @@
+---
+- name: newuser.yml playbook
+  hosts: webservers:backendservers
+  gather_facts: no
+  become: true
+  user: ubuntu
+
+  tasks:
+  - name: Setting up a new user
+    user:
+      name: johnd
+      comment: John Dolittle
+  - name: Creating ssh-key for johnd
+    user:
+      name: johnd
+      generate_ssh_key: yes
