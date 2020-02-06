@@ -68,5 +68,5 @@ Then it creates a hosts.yml file that is placed in the root folder of the repo, 
 
 ## Author
 
-[Tobias Lindberg])https://github.com/tobiasehlert/) - initial creator
+[Tobias Lindberg](https://github.com/tobiasehlert/) - initial creator
 
