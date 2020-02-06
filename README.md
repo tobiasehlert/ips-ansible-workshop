@@ -35,7 +35,7 @@ This folder contains a suite of some playbooks that are utilized in this lab.
 
 There is a small description in every file, what is done.. explore and learn!
 
-* *mysql.yml* installes mysql-server on mysqlservers group
+* *mysqlserver.yml* installes mysql-server on mysqlservers group
 * *newuser.yml* creates a user on the new server and generates an ssh-key on that created user
 * *ping.yml* does ping all servers (not in a normal ping pong.. it's more a debug test to see and answer).. basically
 * *software.yml* installes a couple of software on the remote servers based on hosts parameter

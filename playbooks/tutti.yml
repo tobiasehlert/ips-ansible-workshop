@@ -10,8 +10,8 @@
 - name: importing software.yml
   import_playbook: software.yml
   
-- name: importing mysql.yml
-  import_playbook: mysql.yml
+- name: importing mysqlserver.yml
+  import_playbook: mysqlserver.yml
 
 - name: importing webserver.yml
   import_playbook: webserver.yml
