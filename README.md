@@ -1,6 +1,16 @@
-# ips-ansible-workshop
+# IPS Ansible workshop
 
-IP-Solutions Ansible workshop
+Repo for IP-Solutions Ansible workshop 2020-02-06
+
+This lab is perfect for running in AWS.. :)
+
+## Index readme
+
+* [What is this repo about](#what-is-this-repo-about)
+	* [Folder structure](#folder-structure) 
+* [Prequesition](#prequesition)
+* [How to run this lab](#how-to-run-this-lab)
+* [Author](#author)
 
 ## What is this repo about?
 
@@ -58,5 +68,5 @@ Then it creates a hosts.yml file that is placed in the root folder of the repo, 
 
 ## Author
 
-(Tobias Lindberg)[https://github.com/tobiasehlert/] - initial creator
+[Tobias Lindberg])https://github.com/tobiasehlert/) - initial creator
 
