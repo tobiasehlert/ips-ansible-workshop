@@ -12,4 +12,7 @@ aws ec2 describe-instances --output text --filters Name=instance-state-name,Valu
 echo '    backendservers:
       hosts:' >> $tmpfile
 aws ec2 describe-instances --output text --filters Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].[PublicDnsName, [Tags[?Key==`ansible-workshop`].Value] [0][0] ]' | grep backendservers | awk '{print "        " $1 ":"}' >> $tmpfile
+echo '    mysqlservers:
+      hosts:' >> $tmpfile
+aws ec2 describe-instances --output text --filters Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].[PublicDnsName, [Tags[?Key==`ansible-workshop`].Value] [0][0] ]' | grep mysqlservers | awk '{print "        " $1 ":"}' >> $tmpfile
 mv $tmpfile ~/ips-ansible-workshop/hosts.yml

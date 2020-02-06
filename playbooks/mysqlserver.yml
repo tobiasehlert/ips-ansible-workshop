@@ -1,0 +1,21 @@
+---
+- name: mysqlserver.yml playbook
+  hosts: mysqlservers
+  gather_facts: no
+  become: true
+  user: ubuntu
+
+  tasks:
+  - name: Install required packages
+    package:
+      name: "{{ item }}"
+      state: latest
+      update_cache: yes
+    with_items:
+      - mysql-server
+
+  - name: restart mysql
+    service:
+      name: mysql
+      state: restarted
+
