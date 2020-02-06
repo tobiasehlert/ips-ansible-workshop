@@ -9,7 +9,7 @@ This lab is perfect for running in AWS.. :)
 * [What is this repo about](#what-is-this-repo-about)
 	* [Folder structure](#folder-structure) 
 * [Prequesitions](#prequesitions)
-* [How to run this lab](#how-to-run-this-lab)
+* [How to run the lab](#how-to-run-the-lab)
 * [Author](#author)
 
 ## What is this repo about?
