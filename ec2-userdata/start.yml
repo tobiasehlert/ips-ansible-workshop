@@ -4,14 +4,13 @@
   become: true
 
   tasks:
-  - name: Update all packages
-    apt:
-      name: "*"
-      state: latest
+    - name: Update all packages
+      apt:
+        name: "*"
+        state: latest
 
-  - name: Install packages
-    apt:
-      name:
-        - htop
-        - git-core
-
+    - name: Install packages
+      apt:
+        name:
+          - htop
+          - git-core

@@ -6,34 +6,33 @@
   user: ubuntu
 
   tasks:
-  - name: Install required packages
-    package:
-      name: "{{ item }}"
-      state: latest
-      update_cache: yes
-    with_items:
-      - apache2
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+        state: latest
+        update_cache: yes
+      with_items:
+        - apache2
 
-  - name: restart apache2
-    service:
-      name: apache2
-      state: restarted
+    - name: restart apache2
+      service:
+        name: apache2
+        state: restarted
 
-  - name: clone public hmtl repo to host
-    git:
-      repo: https://github.com/tobiasehlert/ips-ansible-workshop.git
-      dest: /var/www/ips-ansible-workshop
+    - name: clone public hmtl repo to host
+      git:
+        repo: https://github.com/tobiasehlert/ips-ansible-workshop.git
+        dest: /var/www/ips-ansible-workshop
 
-  - name: copy custom html files to webserver location
-    file:
-      src: /var/www/ips-ansible-workshop/html/index.html
-      dest: /var/www/html/index.html
-      state: hard
-      force: yes
+    - name: copy custom html files to webserver location
+      file:
+        src: /var/www/ips-ansible-workshop/html/index.html
+        dest: /var/www/html/index.html
+        state: hard
+        force: yes
 
-  - name: add hostname to html
-    replace:
-      path: /var/www/html/index.html
-      regexp: '/me'
-      replace: '{{ ansible_host }}'
-
+    - name: add hostname to html
+      replace:
+        path: /var/www/html/index.html
+        regexp: "/me"
+        replace: "{{ ansible_host }}"

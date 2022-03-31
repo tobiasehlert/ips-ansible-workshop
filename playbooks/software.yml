@@ -6,13 +6,12 @@
   user: ubuntu
 
   tasks:
-  - name: Install required packages
-    package:
-      name: "{{ item }}"
-      state: present
-    with_items:
-      - wget
-      - vim
-      - htop
-      - screen
-
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - wget
+        - vim
+        - htop
+        - screen

@@ -6,11 +6,11 @@
   user: ubuntu
 
   tasks:
-  - name: Setting up a new user
-    user:
-      name: johnd
-      comment: John Dolittle
-  - name: Creating ssh-key for johnd
-    user:
-      name: johnd
-      generate_ssh_key: yes
+    - name: Setting up a new user
+      user:
+        name: johnd
+        comment: John Dolittle
+    - name: Creating ssh-key for johnd
+      user:
+        name: johnd
+        generate_ssh_key: yes

@@ -6,16 +6,15 @@
   user: ubuntu
 
   tasks:
-  - name: Install required packages
-    package:
-      name: "{{ item }}"
-      state: latest
-      update_cache: yes
-    with_items:
-      - mysql-server
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+        state: latest
+        update_cache: yes
+      with_items:
+        - mysql-server
 
-  - name: restart mysql
-    service:
-      name: mysql
-      state: restarted
-
+    - name: restart mysql
+      service:
+        name: mysql
+        state: restarted
